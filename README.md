@@ -1,6 +1,6 @@
 # Hands-On: Django
 
-Example website build using Django.
+Example website built using Django.
 
 ## Contents
 

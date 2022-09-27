@@ -1,0 +1,21 @@
+@import 'overrides';
+
+* {
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 800px;
+
+  padding-inline: 32px;
+  margin-inline: auto;
+
+  background-color: #fafafa;
+}

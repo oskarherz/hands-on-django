@@ -1,8 +1,7 @@
-@import '../base/theme';
+@import '../_base/theme';
 
 @function theme-color($color, $tone) {
 
-  @warn map-get($palette, $color);
   @if map-has-key($palette, $color){
     $color: map-get($palette, $color);
 

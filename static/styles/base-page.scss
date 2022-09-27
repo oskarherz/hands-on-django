@@ -1,16 +1,26 @@
-@import 'utils/theming';
-@import 'utils/debug';
+@import '_utils/theming';
+@import '_utils/debug';
 
-.block {
+$header-height: 128px;
 
-  &-header {
-    $color-green: theme-color(signal, success);
-    @include debug-bounding-box($color-green, 'Header');
+body {
+  display: flex;
+  flex-direction: column;
+
+  padding-block: 32px;
+
+  .block {
+
+    &-header {
+      flex: 0 0 $header-height;
+      @include debug-bounding-box(blue, '{% block %}', 'header');
+    }
+
+    &-content {
+      flex: 0;
+      @include debug-bounding-box(red, '{% block %}', 'content');
+    }
+
   }
-
-  &-content {
-    $color-red: theme-color(signal, danger);
-    @include debug-bounding-box($color-red, 'Content');
-  }
-
 }
+

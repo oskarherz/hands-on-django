@@ -1,0 +1,74 @@
+@import '../_base/theme';
+@import '../_utils/mixins';
+
+@import '../_utils/theming';
+
+$primary-palette: teal;
+$secondary-palette: slate;
+
+$font-color: theme-color($primary-palette, 900);
+
+$card-header-bg: rgba(41, 159, 123, 0.63);
+$card-header-subtitle: theme-color($primary-palette, 700);
+$card-header-title: theme-color($primary-palette, 900);
+
+$card-body-bg: rgba(203, 231, 222, 0.63);
+$card-body: theme-color($primary-palette, 700);
+
+
+body {
+  color: $font-color;
+}
+
+.block-header {
+  margin: 32px 0 48px 0;
+  text-align: center;
+
+  img {
+    max-height: 128px;
+  }
+}
+
+.block-content {
+  @include shadow(lg);
+  @include rounded(xl);
+
+  position: relative;
+
+  background-color: theme-color($secondary-palette, 100);
+
+  .card {
+    &-header {
+      h1 {
+        padding: 32px;
+        background-color: $card-header-bg;
+
+        .subtitle {
+          color: $card-header-subtitle;
+          font-size: smaller;
+          margin-bottom: -8px;
+        }
+
+        .title {
+          color: $card-header-title;
+          font-size: 64px;
+        }
+      }
+    }
+
+    &-body {
+      padding: 16px 32px;
+
+      background-color: $card-body-bg;
+      color: $card-body;
+
+      ul {
+        margin-bottom: 16px;
+      }
+
+      li {
+        margin-block: 8px;
+      }
+    }
+  }
+}

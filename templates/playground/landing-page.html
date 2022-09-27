@@ -1,14 +1,47 @@
 {% extends "base-page.html" %}
+{% load sass_tags %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% sass_src 'styles/playground/landing-page.scss' %}">
+{% endblock %}
 
 {% block title %}
     <title>Playground</title>
 {% endblock %}
 
 {% block header %}
-    <h1>Header</h1>
+    <img src="https://brandslogos.com/wp-content/uploads/images/large/django-logo.png" />
 {% endblock %}
 
 {% block content %}
-    <h2>Content</h2>
-    <p>Lorem Ipsum Dolor Amet</p>
+    <div class="card">
+        <div class="card-header">
+            <h1>
+                <div class="subtitle">Hands-On:</div>
+                <div class="title">Django</div>
+            </h1>
+        </div>
+        <div class="card-body">
+            <p>This example contains a very basic Django project, containing:</p>
+            <ul>
+                <li>
+                    A custom app <code>("playground")</code>, containing:
+                    <ul>
+                        <li>Very rudimentary <strong>routing</strong> (<code>playground/urls.py</code>)</li>
+                        <li>Very rudimentary, but extensible <strong>views</strong> (<code>playground/views.py</code>)</li>
+                    </ul>
+                </li>
+                <li>
+                    Custom styling, including:
+                    <ul>
+                        <li><strong>SCSS Support</strong></li>
+                        <li>A small SCSS <strong>theming utility</strong> for coloring the site using a palette</li>
+                        <li>A small SCSS <strong>debugging utility</strong> for highlighting elements inside the DOM</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
 {% endblock %}

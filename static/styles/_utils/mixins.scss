@@ -1,0 +1,13 @@
+@import '../_base/variables';
+
+@mixin rounded($size: default) {
+  @warn map-has-key($rounded, $size);
+
+  border-radius: map-get($rounded, $size);
+  overflow: hidden;
+}
+
+@mixin shadow($size: default) {
+  @warn map-has-key($shadow, $size);
+  box-shadow: map-get($shadow, $size);
+}
