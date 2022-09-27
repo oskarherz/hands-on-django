@@ -1,0 +1,26 @@
+/** Utility Mixin, that wraps an element inside a colored box with label. */
+.block-header {
+  position: relative;
+  border: 1px solid #28a745; }
+  .block-header::before {
+    content: "Header";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px; }
+
+.block-content {
+  position: relative;
+  border: 1px solid #dc3545; }
+  .block-content::before {
+    content: "Content";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #dc3545;
+    color: white;
+    padding: 4px 8px; }
+
+/*# sourceMappingURL=base-page.css.map */

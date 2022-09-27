@@ -1,0 +1,16 @@
+@import 'utils/theming';
+@import 'utils/debug';
+
+.block {
+
+  &-header {
+    $color-green: theme-color(signal, success);
+    @include debug-bounding-box($color-green, 'Header');
+  }
+
+  &-content {
+    $color-red: theme-color(signal, danger);
+    @include debug-bounding-box($color-red, 'Content');
+  }
+
+}
