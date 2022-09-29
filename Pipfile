@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 libsass = "*"
 django-sass-processor = "*"
+django-extensions = "*"
 
 [dev-packages]
 

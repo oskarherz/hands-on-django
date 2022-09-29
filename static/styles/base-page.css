@@ -4,32 +4,22 @@ body {
   flex-direction: column;
   padding-block: 32px; }
   body .block-header {
-    flex: 0 0 128px;
-    position: relative;
-    border: 1px solid blue;
-    border-radius: 4px !important; }
-    body .block-header::before {
-      content: "{% block %} header";
-      position: absolute;
-      left: 0;
-      right: 0;
-      background-color: blue;
-      color: white;
-      padding: 4px 8px;
-      text-align: start; }
+    flex: 0 0 64px;
+    margin: 32px 0 48px 0; }
+    body .block-header .navbar ul {
+      display: flex;
+      margin: 0;
+      padding: 16px 0; }
+      body .block-header .navbar ul li {
+        margin-right: 8px;
+        list-style: none; }
+        body .block-header .navbar ul li a {
+          border-radius: 0.375rem;
+          overflow: hidden;
+          padding: 8px 16px;
+          color: white;
+          background-color: #115e59; }
   body .block-content {
-    flex: 0;
-    position: relative;
-    border: 1px solid red;
-    border-radius: 4px !important; }
-    body .block-content::before {
-      content: "{% block %} content";
-      position: absolute;
-      left: 0;
-      right: 0;
-      background-color: red;
-      color: white;
-      padding: 4px 8px;
-      text-align: start; }
+    flex: 0; }
 
 /*# sourceMappingURL=base-page.css.map */

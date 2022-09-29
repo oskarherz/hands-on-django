@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # Third-Party
     'sass_processor',
+    'django_extensions',
 
     # Custom
     'djangoExample.playground'

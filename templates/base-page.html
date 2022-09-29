@@ -26,7 +26,15 @@
 <body>
     {# Header-Block #}
     <div class="block-header">
-        {% block header %}{% endblock %}
+        {% block header %}
+            <nav class="navbar">
+                <ul>
+                    {% for link in links %}
+                        <li><a class="navbar-link{% if link.active %} active{% endif %}" href="{% url link.view_name %}">{{ link.label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endblock %}
     </div>
 
     {# Content-Block #}

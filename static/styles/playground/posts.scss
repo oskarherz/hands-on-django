@@ -1,0 +1,73 @@
+@import '../_utils/mixins';
+@import '../_utils/theming';
+
+$primary-palette: teal;
+
+$posts-header-bg: rgba(41, 159, 123, 0.63);
+$posts-bg: rgba(203, 231, 222, 0.63);
+$posts-title: theme-color($primary-palette, 900);
+
+$post-header-bg: rgba(41, 159, 123, 0.63);
+$post-bg: rgba(203, 231, 222, 0.63);
+$post-title: theme-color($primary-palette, 900);
+$post-date: theme-color($primary-palette, 700);
+$post-content: theme-color($primary-palette, 700);
+
+
+.block-content {
+  @include shadow(lg);
+  @include rounded(xl);
+
+  .posts {
+    color: $posts-title;
+    background-color: $posts-bg;
+
+    &-header {
+      padding: 16px 32px;
+      margin: 0;
+
+      font-weight: bold;
+      background-color: $posts-header-bg;
+    }
+
+    &-content {
+      padding: 16px;
+    }
+
+    .post {
+      @include rounded(md);
+      @include shadow(md);
+
+      margin-bottom: 16px;
+
+      background-color: $post-bg;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+
+      &-header {
+        padding: 16px;
+        background-color: $post-header-bg;
+
+        .post-title {
+          font-size: larger;
+          color: $post-title;
+        }
+
+        .post-date {
+          color: $post-date;
+          margin-bottom: 8px;
+        }
+      }
+
+
+      &-content {
+        padding: 0 16px;
+        color: $post-content;
+      }
+    }
+  }
+
+}

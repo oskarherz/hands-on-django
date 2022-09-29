@@ -1,7 +1,8 @@
 @import '../_base/theme';
-@import '../_utils/mixins';
 
+@import '../_utils/mixins';
 @import '../_utils/theming';
+
 
 $primary-palette: teal;
 $secondary-palette: slate;
@@ -20,14 +21,6 @@ body {
   color: $font-color;
 }
 
-.block-header {
-  margin: 32px 0 48px 0;
-  text-align: center;
-
-  img {
-    max-height: 128px;
-  }
-}
 
 .block-content {
   @include shadow(lg);

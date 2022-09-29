@@ -1,0 +1,25 @@
+{% extends "base-page.html" %}
+{% load sass_tags %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% sass_src 'styles/playground/add-post.scss' %}">
+{% endblock %}
+
+{% block title %}
+    <title>Playground - Create Post</title>
+{% endblock %}
+
+{% block content %}
+    <div class="edit-post-form">
+        <div class="edit-post-form-header">
+            <h2>Post anlegen</h2>
+        </div>
+        <div class="edit-post-form-content">
+            <form action="" method='POST'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" value=""> Save</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+@import '../_utils/mixins';
+@import '../_utils/theming';
+
+$primary-palette: teal;
+
+$posts-header-bg: rgba(41, 159, 123, 0.63);
+$posts-header: theme-color($primary-palette, 900);
+
+$posts-bg: rgba(203, 231, 222, 0.63);
+$posts: theme-color($primary-palette, 700);
+
+.block-content {
+  @include shadow(lg);
+  @include rounded(xl);
+
+  .edit-post-form {
+    &-header {
+      padding: 16px 32px;
+
+      background-color: $posts-header-bg;
+      color: $posts-header;
+    }
+
+    &-content {
+      color: $posts;
+      background-color: $posts-bg;
+
+      padding: 16px;
+
+      p:first-of-type { margin-top: 0; }
+    }
+  }
+}

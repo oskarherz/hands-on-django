@@ -1,7 +1,8 @@
-@import '_utils/theming';
 @import '_utils/debug';
+@import '_utils/mixins';
+@import '_utils/theming';
 
-$header-height: 128px;
+$header-height: 64px;
 
 body {
   display: flex;
@@ -13,12 +14,33 @@ body {
 
     &-header {
       flex: 0 0 $header-height;
-      @include debug-bounding-box(blue, '{% block %}', 'header');
+      margin: 32px 0 48px 0;
+
+      .navbar {
+        ul {
+          display: flex;
+
+          margin: 0;
+          padding: 16px 0;
+
+          li {
+            margin-right: 8px;
+            list-style: none;
+            a {
+              @include rounded(md);
+
+              padding: 8px 16px;
+
+              color: white;
+              background-color: theme-color(teal, 800);
+            }
+          }
+        }
+      }
     }
 
     &-content {
       flex: 0;
-      @include debug-bounding-box(red, '{% block %}', 'content');
     }
 
   }
